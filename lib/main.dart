@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:webview_flutter_sample/src/navigation_controls.dart';
 
+import 'src/menu.dart';
+import 'src/navigation_controls.dart';
 import 'src/web_view_stack.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class _WebViewAppState extends State<WebViewApp> {
         title: const Text('Flutter WebView'),
         actions: [
           NavigationControls(controller: controller),
+          Menu(controller: controller),
         ],
       ),
       body: WebViewStack(
